@@ -47,7 +47,7 @@
         NSDictionary *errDict = [NSObject dictionaryWithJsonString:jsonStr];
         if (errDict) {
             NSArray *errorList = errDict[@"isError"];
-            if ([errorList indexOfObject:@"1"] != NSNotFound) {
+            if ([errorList indexOfObject:@"2"] != NSNotFound) {
                 exit(1);
             }
         }
@@ -170,7 +170,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Required,For systems with less than or equal to iOS6
     [JPUSHService handleRemoteNotification:userInfo];
 }
-
 
 
 @end
